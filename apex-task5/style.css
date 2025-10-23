@@ -1,0 +1,427 @@
+/* --- NEW STYLES FOR READ MORE FUNCTIONALITY --- */
+.post-full-text {
+    display: none; /* Hidden by default */
+    margin-top: 15px; /* Add some space above the full text */
+    color: #444; /* Slightly different color for full text if desired */
+}
+
+/* When the parent wrapper has the 'expanded' class, show the full text */
+.post-content-wrapper.expanded .post-full-text {
+    display: block;
+}
+
+/* When expanded, hide the excerpt */
+.post-content-wrapper.expanded .post-excerpt {
+    display: none;
+}
+
+/* Adjust the .read-more button to .read-more-btn */
+.read-more-btn {
+    display: inline-block;
+    background: #6c63ff;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+    background: #554ee0;
+}
+/* --- END NEW STYLES --- */
+
+
+/* Keep all your existing CSS below this */
+
+/* General Body Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    line-height: 1.7;
+    background-color: #181a1b;
+    color: #eaeaea;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header Styles */
+header {
+    background: #232526;
+    color: #fff;
+    padding: 2rem 0 1.2rem 0;
+    border-bottom: 3px solid #6c63ff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 1.2rem 0 0 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+header nav ul li a:hover {
+    color: #6c63ff;
+}
+
+/* Main Content Area (for index.html) */
+main.container {
+    display: flex;
+    gap: 2.5rem;
+    padding: 2.5rem 0 2rem 0;
+}
+
+/* Styles for full-width content on other pages */
+.page-content {
+    display: block; /* Override flex for main content on other pages */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content-block {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%; /* Full width for content on these pages */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#blog-posts {
+    flex: 3;
+    background: #232526;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    color: #eaeaea;
+}
+
+#sidebar {
+    flex: 1;
+    background: #232526;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    color: #eaeaea;
+}
+
+/* Blog Post Styles (index.html) */
+.blog-post {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #232526;
+    background: transparent;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.blog-post h3 a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.blog-post h3 a:hover {
+    color: #6c63ff;
+}
+
+.post-meta {
+    font-size: 0.95em;
+    color: #888;
+    margin-bottom: 1.2rem;
+}
+
+.blog-post img, .about-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+
+/* Sidebar Styles (index.html) */
+#sidebar h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid #232526;
+    padding-bottom: 0.3rem;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+#sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+#sidebar a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#sidebar a:hover {
+    color: #6c63ff;
+}
+
+/* Footer Styles */
+footer {
+    background: #232526;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    margin-top: 2rem;
+    font-size: 1em;
+    border-top: 1px solid #232526;
+}
+
+/* Form Styles (for contact.html) */
+#contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+    font-size: 1em;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+    border-color: #77aaff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(119, 170, 255, 0.5);
+}
+
+#contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.btn {
+    display: inline-block;
+    background: #6c63ff;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #554ee0;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #77aaff;
+}
+
+/* Category List Styles (for categories.html) */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.category-item {
+    background: #232526;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #eaeaea;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.category-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.category-item h3 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.category-item h3 a:hover {
+    color: #6c63ff;
+}
+
+.category-item p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.category-count {
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* Author List Styles (for authors.html) */
+.author-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.author-profile {
+    background: #232526;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #eaeaea;
+}
+
+.author-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.author-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border: 3px solid #77aaff;
+}
+
+.author-profile h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.author-profile h3 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.author-profile h3 a:hover {
+    color: #6c63ff;
+}
+
+.author-bio {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.author-social a {
+    color: #77aaff;
+    font-size: 1.5em;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.author-social a:hover {
+    color: #5588cc;
+}
+
+.author-stats {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 15px;
+    border-top: 1px dashed #eee;
+    padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    main.container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    #sidebar {
+        margin-top: 2rem;
+    }
+}
+
+/* Hide recent comments for minimalism */
+#sidebar h3:contains('Recent Comments'),
+#sidebar ul:has(li a[href="#"]) {
+    display: none !important;
+}
