@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms and To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Forms & Flexbox Demo</h1>
+      <nav>
+        <a href="#contactForm">Contact</a>
+        <a href="#todoList">To-Do List</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-grid">
+    <section class="form-section card">
+      <h2>Simple Form</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
+        <div id="formMessage"></div>
+      </form>
+    </section>
+    <section class="flexbox-section card">
+      <h2>Flexbox</h2>
+      <div class="flex-demo">
+        <div class="flex-box">Box 1</div>
+        <div class="flex-box">Box 2</div>
+        <div class="flex-box">Box 3</div>
+      </div>
+    </section>
+    <section class="todo-section card">
+      <h2>To-Do List</h2>
+      <div class="todo-container">
+        <input type="text" id="todoInput" placeholder="Enter a task">
+        <button id="addTodoBtn">Add Task</button>
+      </div>
+      <ul id="todoList"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html> 
